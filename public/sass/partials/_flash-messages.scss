@@ -1,0 +1,28 @@
+.flash {
+  // border: 2px solid black;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  align-items: center;
+  background: #fff;
+
+  p {
+    margin: 0;
+  }
+
+  button.flash__remove {
+    border: none;
+    background: transparent;
+    font-size: 2em;
+    line-height: 0.5;
+    padding-bottom: 3.5px;
+  }
+}
+
+.flash--success {
+  border: 6px solid green;
+}
+
+.flash--error {
+  border: 6px solid error;
+}

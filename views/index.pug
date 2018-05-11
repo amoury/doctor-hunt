@@ -1,0 +1,27 @@
+extends layout.pug
+
+block content
+  div.jumbotron.jumbotron-fluid
+    div.container
+      h1.display-4 Fluid jumbotron
+      p.lead This is a modified jumbotron that occupies the entire horizontal space of its parent.
+
+  .container-fluid  
+    .row
+      //- Departments (First Column)
+      .col-md-2.dept-filter 
+        h3 Departments
+        .list-group
+          each doctor in doctors
+            a.list-group-item.list-group-item-action(href="#") #{doctor.department}
+      
+
+      .col-md-6.offset-md-1
+        include mixins/_doctor-card.pug
+        each doctor in doctors
+          +doctor-card(doctor)
+
+        
+      .col-md-2.offset-md-1
+        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique repudiandae officia possimus velit? Laboriosam vero dolores voluptas et reiciendis soluta quos, beatae modi corporis consequatur. Assumenda atque velit consequuntur inventore!
+

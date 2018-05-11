@@ -1,0 +1,35 @@
+extends layout
+
+block content 
+  h2= title
+
+  .container
+    .col-md-8.offset-md-2
+      form.doc-form(action="/add-doctor" method="POST") 
+        .form-group
+          label(for="name") Doctor's Name
+          .input-group.mb-2
+            .input-group-prepend
+              .input-group-text Dr.
+            input.form-control(type="text" id="name" name="name" placeholder="Enter the name of the Doctor" required)
+
+        .form-group
+          label(for="hospital") Hospital
+          input.form-control(type="text" name="hospital" id="hospital" placeholder="Enter the Hospital Name" required)
+        
+        .form-group
+          label(for="department") Department
+          input.form-control(type="text" name="department" id="department" placeholder="Enter the Department Name" required)
+
+        fieldset.form-group
+          legend.col-form-label Gender
+          .form-check.form-check-inline
+            input.form-check-input(type="radio" name="gender" id="male" value="male")
+            label.form-check-label(for="male") Male
+          
+          .form-check.form-check-inline
+            input.form-check-input(type="radio" name="gender" id="female" value="female")
+            label.form-check-label(for="female") Female
+        
+        button.btn.btn-success.btn-block(type="submit") Add Doctor
+        

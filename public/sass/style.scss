@@ -1,0 +1,13 @@
+@import "~bootstrap/scss/bootstrap";
+@import 'partials/variables';
+@import 'partials/general';
+@import 'partials/navigation';
+@import 'partials/doctor-card';
+@import 'partials/doc-form';
+@import 'partials/flash-messages';
+@import 'partials/doc-info-report';
+
+
+body {
+  background: $cream;
+}

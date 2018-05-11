@@ -1,0 +1,11 @@
+mixin doctor-card(doctor = {}) 
+  .card.doctor-card
+    h5.card-header 
+      a(href="/single") #{doctor.name} 
+        span (Specialist - MBBS, MD)
+    .card-body
+      h5.card-title #{doctor.hospital}
+      p.card-text= `Department - ${doctor.department}`
+      a.btn.btn-primary#upvoteBtn(href=`/doctor/${doctor._id}/upvote` data-voteCount=`${doctor.votes}`)= `Upvote (${doctor.votes})`
+      a.btn.btn-outline-secondary.btn-navbar(href="#") Reviews
+      a.btn.btn-outline-danger(href="#") Favourite
